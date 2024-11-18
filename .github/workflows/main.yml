@@ -55,7 +55,7 @@ jobs:
         context: "{{defaultContext}}:one-container/pihole-unbound/"
         platforms: linux/arm/v7,linux/arm64/v8,linux/amd64
         push: true
-        tags: crazyp/docker-pihole-unbound:latest,crazyp/docker-pihole-unbound:${{ steps.latest_release.outputs.release }}
+        tags: crazyp83/pihole-unbound:latest,crazyp83/pihole-unbound:${{ steps.latest_release.outputs.release }}
       if: ${{ steps.latest_release.outputs.release != steps.previous_release.outputs.release }}
         
     - name: Create release
