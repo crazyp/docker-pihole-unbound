@@ -50,8 +50,8 @@ jobs:
 
     - name: Install updates
       run:
-          apt-get update
-          apt-get upgrade
+        sudo apt update
+        sudo apt upgrade
         
 
     - name: Build and push
