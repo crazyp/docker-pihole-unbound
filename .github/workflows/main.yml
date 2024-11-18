@@ -48,12 +48,6 @@ jobs:
         password: ${{ secrets.DOCKER_HUB_TOKEN }}
       if: ${{ steps.latest_release.outputs.release != steps.previous_release.outputs.release }}
 
-    - name: Install updates
-      run:
-        sudo apt update
-        sudo apt upgrade
-        
-
     - name: Build and push
       uses: docker/build-push-action@v6.9.0
       with:
